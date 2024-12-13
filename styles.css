@@ -33,7 +33,7 @@ header {
     color: #000000;
     padding: 20px 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 60px;
+    height: 100px;
 }
 .search-box {
     text-align: right;
@@ -197,6 +197,7 @@ body {
 header .menu-toggle {
     display: none;
 }
+
 .search-box button {
     flex: 0 0 auto; 
     background: #8d1017;
@@ -205,7 +206,16 @@ header .menu-toggle {
     padding: 5px 10px;
     cursor: pointer;
 }
+header .main-nav ul ul {
+    display: none;
+    flex-direction: column;
+    background-color: #7d040d;
+}
 
+
+header .main-nav ul li.open > ul {
+    display: flex;
+}
 @media (max-width: 768px) {
 
     .main-nav ul {

@@ -12,16 +12,7 @@
     height: 10px;
     object-fit: cover;
 }
-header .main-nav ul ul {
-    display: none;
-    flex-direction: column;
-    background-color: #8d1017;
-}
 
-
-header .main-nav ul li.open > ul {
-    display: flex;
-}
 </style>
     </style>
 </head>
@@ -90,14 +81,14 @@ header .main-nav ul li.open > ul {
 
     dropdownToggles.forEach((toggle) => {
         toggle.addEventListener("click", (e) => {
-            e.preventDefault(); // Prepreči odpiranje povezave
+            e.preventDefault(); // Prepreči odpiranje povezave glavnega menija
             const parent = toggle.parentElement;
 
             // Preklopi razred "open" za prikaz/skritje podmenija
             if (parent.classList.contains("open")) {
                 parent.classList.remove("open");
             } else {
-                // Zapri druge odprte menije
+                // Zapri vse druge odprte menije
                 document.querySelectorAll("li.open").forEach((item) => {
                     item.classList.remove("open");
                 });
