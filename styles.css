@@ -87,7 +87,7 @@ header .logo img {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: #a3131a;
+    background: #86070d;
     padding: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -230,9 +230,6 @@ header .menu-toggle {
     text-decoration: none;
 }
 
-.main-nav ul ul li a:hover {
-    background-color: #a81c24;
-}
 @media (max-width: 768px) {
 
     .main-nav ul {

@@ -77,25 +77,36 @@
             }
         });
         document.addEventListener("DOMContentLoaded", () => {
-    
+    // Select all dropdown toggles
     const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
     dropdownToggles.forEach((toggle) => {
         toggle.addEventListener("click", (e) => {
-            e.preventDefault(); 
-            const parent = toggle.parentElement; 
+            e.preventDefault(); // Prevent navigation on click
+            const parent = toggle.parentElement; // Get the parent <li> element
 
-       
+            // Toggle the 'open' class
             if (parent.classList.contains("open")) {
                 parent.classList.remove("open");
             } else {
-                
+                // Close other open menus
                 document.querySelectorAll(".main-nav li.open").forEach((item) => {
                     item.classList.remove("open");
                 });
-                parent.classList.add("open"); 
+                parent.classList.add("open"); // Open the clicked menu
             }
         });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        const menu = document.querySelector(".main-nav");
+        if (!menu.contains(e.target)) {
+            // Close all open menus
+            document.querySelectorAll(".main-nav li.open").forEach((item) => {
+                item.classList.remove("open");
+            });
+        }
     });
 });
     </script>
