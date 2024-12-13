@@ -77,22 +77,23 @@
             }
         });
         document.addEventListener("DOMContentLoaded", () => {
+    
     const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
     dropdownToggles.forEach((toggle) => {
         toggle.addEventListener("click", (e) => {
-            e.preventDefault(); // Prepreči odpiranje povezave glavnega menija
-            const parent = toggle.parentElement;
+            e.preventDefault(); 
+            const parent = toggle.parentElement; 
 
-            // Preklopi razred "open" za prikaz/skritje podmenija
+       
             if (parent.classList.contains("open")) {
                 parent.classList.remove("open");
             } else {
-                // Zapri vse druge odprte menije
-                document.querySelectorAll("li.open").forEach((item) => {
+                
+                document.querySelectorAll(".main-nav li.open").forEach((item) => {
                     item.classList.remove("open");
                 });
-                parent.classList.add("open");
+                parent.classList.add("open"); 
             }
         });
     });

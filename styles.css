@@ -206,15 +206,32 @@ header .menu-toggle {
     padding: 5px 10px;
     cursor: pointer;
 }
-header .main-nav ul ul {
-    display: none;
-    flex-direction: column;
-    background-color: #7d040d;
+.main-nav ul ul {
+    display: none; /* Keep submenu hidden by default */
+    position: absolute;
+    top: 100%; /* Align submenu below the main item */
+    left: 0;
+    background-color: #8d1017;
+    padding: 10px 0;
+    z-index: 1000;
+    width: 200px; /* Adjust as needed */
 }
 
+/* Show submenu when the parent <li> has the 'open' class */
+.main-nav li.open > ul {
+    display: block;
+}
 
-header .main-nav ul li.open > ul {
-    display: flex;
+/* Submenu items */
+.main-nav ul ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav ul ul li a:hover {
+    background-color: #a81c24;
 }
 @media (max-width: 768px) {
 
