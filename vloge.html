@@ -89,34 +89,34 @@
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="logo.png"   alt="Pesnica Logo" /></a>
+            <a href="index.html"><img src="logo.png" alt="Pesnica Logo" /></a>
         </div>
         <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul>
                 <li><a href="index.html">Domov</a></li>
                 <li><a href="obcina.html">Občina</a>
                     <ul>
-                        <li><a href="obcina_glavni_podatki.html">Glavni podatki</a></li>
-                        <li><a href="obcina_obcinska_uprava.html">Občinska uprava</a></li>
+                        <li><a href="obcina.html">Občinska uprava</a></li>
+                        <li><a href="obcina_varstvo.html">Varstvo podatkov</a></li>
                         <li><a href="obcina_katalog_informacij.html">Katalog informacij</a></li>
                         <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
                     </ul>
                 </li>
                 <li><a href="organi.html">Organi</a>
                     <ul>
-                        <li><a href="organi_glavni_organi.html">Glavni organi</a></li>
+                        <li><a href="organi.html">Glavni organi</a></li>
                         <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
                         <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
                     </ul>
                 </li>
                 <li><a href="novice.html">Novice</a>
                     <ul>
-                        <li><a href="novice_novo.html">Novo</a></li>
+                        <li><a href="novice.html">Novo</a></li>
                         <li><a href="novice_razpisi.html">Razpisi</a></li>
-                        <li><a href="novice_pomembno.html">Pomembno</a></li>
                     </ul>
                 </li>
-                <li><a href="lokalno.html">Lokalno</a>
+                <li><a href="lokalno_drustva.html">Lokalno</a>
                     <ul>
                         <li><a href="lokalno_drustva.html">Društva</a></li>
                         <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
@@ -127,17 +127,26 @@
                 <li><a href="vloge.html">Vloge/Obrazci</a>
                     <ul>
                         <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
-                        <li><a href="vloge_uradne.html">Uradne vloge in obrazci</a></li>
+                        <li><a href="vloge.html">Uradne vloge in obrazci</a></li>
                     </ul>
                 </li>
-                <li><a href="ostalo.html">Ostalo</a>
-                </li>
+                <li><a href="ostalo.html">Ostalo</a></li>
             </ul>
         </nav>
         <div class="search-box" style="margin-top: 10px; position: absolute; right: 20px; top: 20px;">
             <input type="text" placeholder="Išči...">
             <button id="close-image"><img src="lupa.png"></button>
         </div>
+        <script>
+        document.querySelector('.search-box input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim().toLowerCase();
+                if (query) {
+                    window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+    </script>
     </header>
     <h1 style="font-size: 25px;">Uradni obrazci</h1>
     <div class="searchboxstie">

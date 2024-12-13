@@ -88,34 +88,34 @@
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="logo.png"   alt="Pesnica Logo" /></a>
+            <a href="index.html"><img src="logo.png" alt="Pesnica Logo" /></a>
         </div>
         <nav class="main-nav">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul>
                 <li><a href="index.html">Domov</a></li>
                 <li><a href="obcina.html">Občina</a>
                     <ul>
-                        <li><a href="obcina_glavni_podatki.html">Glavni podatki</a></li>
-                        <li><a href="obcina_obcinska_uprava.html">Občinska uprava</a></li>
+                        <li><a href="obcina.html">Občinska uprava</a></li>
+                        <li><a href="obcina_varstvo.html">Varstvo podatkov</a></li>
                         <li><a href="obcina_katalog_informacij.html">Katalog informacij</a></li>
                         <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
                     </ul>
                 </li>
                 <li><a href="organi.html">Organi</a>
                     <ul>
-                        <li><a href="organi_glavni_organi.html">Glavni organi</a></li>
+                        <li><a href="organi.html">Glavni organi</a></li>
                         <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
                         <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
                     </ul>
                 </li>
                 <li><a href="novice.html">Novice</a>
                     <ul>
-                        <li><a href="novice_novo.html">Novo</a></li>
+                        <li><a href="novice.html">Novo</a></li>
                         <li><a href="novice_razpisi.html">Razpisi</a></li>
-                        <li><a href="novice_pomembno.html">Pomembno</a></li>
                     </ul>
                 </li>
-                <li><a href="lokalno.html">Lokalno</a>
+                <li><a href="lokalno_drustva.html">Lokalno</a>
                     <ul>
                         <li><a href="lokalno_drustva.html">Društva</a></li>
                         <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
@@ -126,17 +126,26 @@
                 <li><a href="vloge.html">Vloge/Obrazci</a>
                     <ul>
                         <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
-                        <li><a href="vloge_uradne.html">Uradne vloge in obrazci</a></li>
+                        <li><a href="vloge.html">Uradne vloge in obrazci</a></li>
                     </ul>
                 </li>
-                <li><a href="ostalo.html">Ostalo</a>
-                </li>
+                <li><a href="ostalo.html">Ostalo</a></li>
             </ul>
         </nav>
         <div class="search-box" style="margin-top: 10px; position: absolute; right: 20px; top: 20px;">
             <input type="text" placeholder="Išči...">
             <button id="close-image"><img src="lupa.png"></button>
         </div>
+        <script>
+        document.querySelector('.search-box input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim().toLowerCase();
+                if (query) {
+                    window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+    </script>
     </header>
 
     <main>
@@ -216,32 +225,39 @@
             });
         }
     </script>
-    <footer style="background: #8d1017; padding: 20px 0; color: white;">
-        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
-            <div style="flex: 1; min-width: 200px;">
-                <h3 style="margin-bottom: 10px;">KONTAKT</h3>
-                <p>Občina Pesnica</p>
-                <p>Pesnica pri Mariboru 43a</p>
-                <p>2211 Pesnica pri Mariboru</p>
-                <p>📞 02 654 23 09</p>
-                <p>📠 02 654 23 19</p>
-                <p>📧 <a href="mailto:obcina.pesnica@pesnica.si" style="text-decoration: none; color: white;">obcina.pesnica@pesnica.si</a></p>
-            </div>
-            <div style="flex: 1; min-width: 200px;">
-                <h3 style="margin-bottom: 10px;">URADNE URE - ZA STRANKE</h3>
-                <p>Ponedeljek: 8.00 - 12.00, 13.00 - 15.00</p>
-                <p>Sreda: 8.00 - 12.00, 13.00 - 17.00</p>
-                <p>Petek: 8.00 - 12.00</p>
-            </div>
-            <div style="flex: 1; min-width: 200px;">
-                <h3 style="margin-bottom: 10px;">POSLOVNI ČAS OBČINE</h3>
-                <p>Ponedeljek: 7.00 - 15.00</p>
-                <p>Torek: 7.00 - 15.00</p>
-                <p>Sreda: 7.00 - 17.00</p>
-                <p>Četrtek: 7.00 - 15.00</p>
-                <p>Petek: 7.00 - 13.00</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+        <script>
+            function toggleMenu() {
+                const navMenu = document.querySelector('.main-nav ul');
+                navMenu.classList.toggle('show');
+            }
+        </script>
+            <footer style="background: #8d1017; padding: 20px 0; color: white;">
+                <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <h3 style="margin-bottom: 10px;">KONTAKT</h3>
+                        <p>Občina Pesnica</p>
+                        <p>Pesnica pri Mariboru 43a</p>
+                        <p>2211 Pesnica pri Mariboru</p>
+                        <p>📞 02 654 23 09</p>
+                        <p>📠 02 654 23 19</p>
+                        <p>📧 <a href="mailto:obcina.pesnica@pesnica.si" style="text-decoration: none; color: white;">obcina.pesnica@pesnica.si</a></p>
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <h3 style="margin-bottom: 10px;">URADNE URE - ZA STRANKE</h3>
+                        <p>Ponedeljek: 8.00 - 12.00, 13.00 - 15.00</p>
+                        <p>Sreda: 8.00 - 12.00, 13.00 - 17.00</p>
+                        <p>Petek: 8.00 - 12.00</p>
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <h3 style="margin-bottom: 10px;">POSLOVNI ČAS OBČINE</h3>
+                        <p>Ponedeljek: 7.00 - 15.00</p>
+                        <p>Torek: 7.00 - 15.00</p>
+                        <p>Sreda: 7.00 - 17.00</p>
+                        <p>Četrtek: 7.00 - 15.00</p>
+                        <p>Petek: 7.00 - 13.00</p>
+                    </div>
+                </div>
+            </footer>
+        </body>
+        </html>
+        

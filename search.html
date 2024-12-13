@@ -11,75 +11,98 @@
     height: 10px;
     object-fit: cover;
 }
-main {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #8d1017;
-        }
-
-        .image {
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-        .photo-gallery {
-    margin: 40px auto;
-    max-width: 900px;
-    text-align: center;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-.photo-gallery h2 {
+/* Kontejner za rezultate */
+#searchResults {
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    list-style: none;
+}
+
+/* Naslov iskanja */
+#searchResults h2 {
     color: #8d1017;
-    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.photo-gallery .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+/* Seznam zadetkov */
+#searchResults li {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.photo-gallery img {
+/* Zadnji element brez obrobe */
+#searchResults li:last-child {
+    border-bottom: none;
+}
+
+/* Povezave do zadetkov */
+#searchResults li a {
+    text-decoration: none;
+    color: #8d1017;
+    font-weight: bold;
+}
+
+/* Stil ob prehodu miške */
+#searchResults li a:hover {
+    text-decoration: underline;
+}
+
+/* Stil za prazno stanje */
+#searchResults p {
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+}
+
+/* Stil za gumb za mobilno navigacijo */
+.main-nav ul.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
     width: 100%;
-    height: auto;
-    border-radius: 4px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
+    background-color: #8d1017;
+    z-index: 1000;
+    padding: 10px 0;
 }
 
-.photo-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+/* Stil za prikaz rezultatov na manjših zaslonih */
+@media (max-width: 768px) {
+    #searchResults {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #searchResults li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #searchResults li a {
+        margin-bottom: 5px;
+    }
 }
 </style>
-    
 </head>
 <body>
     <header>
@@ -143,60 +166,53 @@ main {
         });
     </script>
     </header>
-    <main>
-        <div class="container">
-            <h1>14. REDNA SEJA OBČINSKEGA SVETA</h1>
-            <div class="image">
-                <img src="news2.jpg" alt="Slika novice 1">
-            </div>
-            <p>
-                Občinski svet je na 14. redni seji obravnaval in potrdil elaborat o oblikovanju cen ravnanja s komunalnimi odpadki v letu 2025, sprejel "Rebalans " občinskega proračuna in sprejel odlok o porabi sredstev proračunske rezerve.
- 
-                Gradivo seje je dostopno na https://www.pesnica.si/objava/1020620
-            </p>
-            <section class="photo-gallery">
-                <h2>Fotogalerija</h2>
-                <div class="gallery">
-                    <img src="photo1.jpg" alt="Fotografija 1" onclick="openModal(this)">
-                    <img src="photo2.jpg" alt="Fotografija 2" onclick="openModal(this)">
-                    <img src="photo3.jpg" alt="Fotografija 3" onclick="openModal(this)">
-                    <img src="photo4.jpg" alt="Fotografija 4" onclick="openModal(this)">
-                    <img src="photo5.jpg" alt="Fotografija 5" onclick="openModal(this)">
-                    <img src="photo6.jpg" alt="Fotografija 6" onclick="openModal(this)">
-                    <img src="photo7.jpg" alt="Fotografija 7" onclick="openModal(this)">
-                    <img src="photo8.jpg" alt="Fotografija 8" onclick="openModal(this)">
-                    <img src="photo9.jpg" alt="Fotografija 9" onclick="openModal(this)">
-                </div>
-                <div id="modal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="modal-image">
-                    <div id="caption"></div>
-                </div>
-            </section>
-            
 
-            <div id="modal" class="modal">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <img class="modal-content" id="modal-image">
-                <div id="caption"></div>
-            </div>
-        </div>
-    </main>
-    <script>function openModal(image) {
-        const modal = document.getElementById("modal");
-        const modalImage = document.getElementById("modal-image");
-        const caption = document.getElementById("caption");
-    
-        modal.style.display = "block";
-        modalImage.src = image.src;
-        caption.innerHTML = image.alt;
-    }
-    
-    function closeModal() {
-        const modal = document.getElementById("modal");
-        modal.style.display = "none";
+
+<main>
+    <h1 style="text-align: center;">Rezultati iskanja</h1>
+    <ul id="searchResults"></ul>
+</main>
+<script>
+    const queryParams = new URLSearchParams(window.location.search);
+    const query = queryParams.get('q').toLowerCase();
+
+    const pages = [
+    { title: "Domov", url: "index.html" },
+                { title: "Občinska uprava", url: "obcina.html" },
+                { title: "Varstvo podatkov", url: "obcina_varstvo.html" },
+                { title: "Katalog informacij", url: "obcina_katalog_informacij.html" },
+                { title: "Delovni čas in kontakt", url: "obcina_delovni_cas.html" },
+                { title: "Organi", url: "organi.html" },
+                { title: "Občinski svet", url: "organi_obcinski_svet.html" },
+                { title: "Volilna komisija", url: "organi_volilna_komisija.html" },
+                { title: "Društva", url: "lokalno_drustva.html" },
+                { title: "Šolstvo", url: "lokalno_solstvo.html" },
+                { title: "Zdravstvo", url: "lokalno_zdravstvo.html" },
+                { title: "Donatorstvo", url: "lokalno_donatorstvo.html" },
+                { title: "Novice", url: "novice.html" },
+                { title: "Razpisi", url: "novice_razpisi.html" },
+                { title: "Vloge/Obrazci", url: "vloge.html" },
+                { title: "Za Mlade", url: "vloge_dijaki_študenti.html" },
+                { title: "Ostalo", url: "ostalo.html" },
+
+
+    ];
+
+    const resultsContainer = document.getElementById('searchResults');
+    const results = pages.filter(page => page.title.toLowerCase().includes(query));
+
+    if (results.length > 0) {
+        results.forEach(result => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="${result.url}">${result.title}</a>`;
+            resultsContainer.appendChild(li);
+        });
+    } else {
+        resultsContainer.innerHTML = '<p>Ni najdenih rezultatov.</p>';
     }
 </script>
+
+</main>
 <script>
     function toggleMenu() {
         const navMenu = document.querySelector('.main-nav ul');

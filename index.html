@@ -66,6 +66,16 @@
             <input type="text" placeholder="Išči...">
             <button id="close-image"><img src="lupa.png"></button>
         </div>
+        <script>
+        document.querySelector('.search-box input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim().toLowerCase();
+                if (query) {
+                    window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+    </script>
     </header>
 
     <main>
@@ -150,7 +160,7 @@
         <section class="map" style="margin: 20px auto; width: 80%; text-align: center;">
             <h2 style="border-bottom: 1px solid #ccc; padding-bottom: 10px;">Zemljevid</h2>
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.6478887398095!2d15.670456615711747!3d46.60685697913115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f79c154f5c04b%3A0x5e2ed3a8d9debf47!2sPesnica%20pri%20Mariboru!5e0!3m2!1sen!2ssi!4v1702021165001!5m2!1sen!2ssi" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.6612356784074!2d15.676964076568938!3d46.61629060136907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f79b34557e2eb%3A0xc360164cc6b1cfa0!2sOb%C4%8Dina%20Pesnica!5e0!3m2!1ssl!2ssi!4v1702021165001!5m2!1ssl!2ssi" 
                 width="100%" 
                 height="400" 
                 style="border: 0;" 
