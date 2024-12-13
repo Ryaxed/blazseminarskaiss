@@ -90,28 +90,28 @@ main {
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul>
                 <li><a href="index.html">Domov</a></li>
-                <li><a href="obcina.html">Občina</a>
+                <li><a href="obcina.html" class="dropdown-toggle">Občina</a>
                     <ul>
-                        <li><a href="obcina.html">Občinska uprava</a></li>
-                        <li><a href="obcina_varstvo.html">Varstvo podatkov</a></li>
-                        <li><a href="obcina_katalog_informacij.html">Katalog informacij</a></li>
-                        <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
+                        <li><a href="obcina.html">Uprava</a></li>
+                        <li><a href="obcina_varstvo.html">Varstvo </a></li>
+                        <li><a href="obcina_katalog_informacij.html">Katalog</a></li>
+                        <li><a href="obcina_delovni_cas.html">Delovnik</a></li>
                     </ul>
                 </li>
-                <li><a href="organi.html">Organi</a>
+                <li><a href="organi.html"class="dropdown-toggle">Organi</a>
                     <ul>
                         <li><a href="organi.html">Glavni organi</a></li>
                         <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
                         <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
                     </ul>
                 </li>
-                <li><a href="novice.html">Novice</a>
+                <li><a href="novice.html"class="dropdown-toggle">Novice</a>
                     <ul>
                         <li><a href="novice.html">Novo</a></li>
                         <li><a href="novice_razpisi.html">Razpisi</a></li>
                     </ul>
                 </li>
-                <li><a href="lokalno_drustva.html">Lokalno</a>
+                <li><a href="lokalno_drustva.html"class="dropdown-toggle">Lokalno</a>
                     <ul>
                         <li><a href="lokalno_drustva.html">Društva</a></li>
                         <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
@@ -119,10 +119,10 @@ main {
                         <li><a href="lokalno_donatorstvo.html">Donatorstvo</a></li>
                     </ul>
                 </li>
-                <li><a href="vloge.html">Vloge/Obrazci</a>
+                <li><a href="vloge.html"class="dropdown-toggle">Vloge/Obrazci</a>
                     <ul>
-                        <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
-                        <li><a href="vloge.html">Uradne vloge in obrazci</a></li>
+                        <li><a href="vloge_dijaki_studenti.html">Za Mlade</a></li>
+                        <li><a href="vloge.html">Uradne Vloge</a></li>
                     </ul>
                 </li>
                 <li><a href="ostalo.html">Ostalo</a></li>
@@ -141,7 +141,41 @@ main {
                 }
             }
         });
+        document.addEventListener("DOMContentLoaded", () => {
+    // Select all dropdown toggles
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+    dropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent navigation on click
+            const parent = toggle.parentElement; // Get the parent <li> element
+
+            // Toggle the 'open' class
+            if (parent.classList.contains("open")) {
+                parent.classList.remove("open");
+            } else {
+                // Close other open menus
+                document.querySelectorAll(".main-nav li.open").forEach((item) => {
+                    item.classList.remove("open");
+                });
+                parent.classList.add("open"); // Open the clicked menu
+            }
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        const menu = document.querySelector(".main-nav");
+        if (!menu.contains(e.target)) {
+            // Close all open menus
+            document.querySelectorAll(".main-nav li.open").forEach((item) => {
+                item.classList.remove("open");
+            });
+        }
+    });
+});
     </script>
+
     </header>
     <main>
         <div class="container">
