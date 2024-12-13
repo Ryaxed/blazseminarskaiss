@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pesnica - Prenovljena Spletna Stran</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -11,7 +12,16 @@
     height: 10px;
     object-fit: cover;
 }
+header .main-nav ul ul {
+    display: none;
+    flex-direction: column;
+    background-color: #8d1017;
+}
 
+
+header .main-nav ul li.open > ul {
+    display: flex;
+}
 </style>
     </style>
 </head>
@@ -24,7 +34,7 @@
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul>
                 <li><a href="index.html">Domov</a></li>
-                <li><a href="obcina.html">Občina</a>
+                <li><a href="obcina.html" class="dropdown-toggle">Občina</a>
                     <ul>
                         <li><a href="obcina.html">Občinska uprava</a></li>
                         <li><a href="obcina_varstvo.html">Varstvo podatkov</a></li>
@@ -32,20 +42,20 @@
                         <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
                     </ul>
                 </li>
-                <li><a href="organi.html">Organi</a>
+                <li><a href="organi.html"class="dropdown-toggle">Organi</a>
                     <ul>
                         <li><a href="organi.html">Glavni organi</a></li>
                         <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
                         <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
                     </ul>
                 </li>
-                <li><a href="novice.html">Novice</a>
+                <li><a href="novice.html"class="dropdown-toggle">Novice</a>
                     <ul>
                         <li><a href="novice.html">Novo</a></li>
                         <li><a href="novice_razpisi.html">Razpisi</a></li>
                     </ul>
                 </li>
-                <li><a href="lokalno_drustva.html">Lokalno</a>
+                <li><a href="lokalno_drustva.html"class="dropdown-toggle">Lokalno</a>
                     <ul>
                         <li><a href="lokalno_drustva.html">Društva</a></li>
                         <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
@@ -53,7 +63,7 @@
                         <li><a href="lokalno_donatorstvo.html">Donatorstvo</a></li>
                     </ul>
                 </li>
-                <li><a href="vloge.html">Vloge/Obrazci</a>
+                <li><a href="vloge.html"class="dropdown-toggle">Vloge/Obrazci</a>
                     <ul>
                         <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
                         <li><a href="vloge.html">Uradne vloge in obrazci</a></li>
@@ -75,7 +85,29 @@
                 }
             }
         });
+        document.addEventListener("DOMContentLoaded", () => {
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+    dropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+            e.preventDefault(); // Prepreči odpiranje povezave
+            const parent = toggle.parentElement;
+
+            // Preklopi razred "open" za prikaz/skritje podmenija
+            if (parent.classList.contains("open")) {
+                parent.classList.remove("open");
+            } else {
+                // Zapri druge odprte menije
+                document.querySelectorAll("li.open").forEach((item) => {
+                    item.classList.remove("open");
+                });
+                parent.classList.add("open");
+            }
+        });
+    });
+});
     </script>
+
     </header>
 
     <main>
