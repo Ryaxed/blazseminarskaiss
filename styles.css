@@ -201,6 +201,7 @@ header .menu-toggle {
         position: relative;
         padding: 10px 20px;
         gap: 10px; 
+        height: 100vh; /* Nastavimo višino headerja na celoten zaslon */
     }
 
     .search-box {
@@ -219,6 +220,10 @@ header .menu-toggle {
         font-size: 24px;
         color: white;
         cursor: pointer;
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
     }
 
     
@@ -289,6 +294,8 @@ header .menu-toggle {
         align-items: center;
         position: relative;
         padding: 10px 20px;
+        gap: 10px; 
+        height: 100vh;
     }
 
 
@@ -305,8 +312,9 @@ header .menu-toggle {
         color: white;
         cursor: pointer;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 50%; /* Postavi na sredino */
+        left: 50%; /* Centriraj horizontalno */
+        transform: translate(-50%, -50%); /* Korekcija za absolutno centriranje */
     }
 
 
