@@ -3,8 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Za dijake in študente - Vloge Pesnica</title>
+    <title>Vloge/Obrazci - Pesnica</title>
     <link rel="stylesheet" href="styles.css">
+
+<style>
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #8d1017;
+            margin-bottom: 20px;
+        }
+
+        .searchboxstie {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .searchboxstie input[type="text"] {
+            padding: 10px;
+            font-size: 14px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-item span {
+    padding-left: 20px;
+}
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .title {
+            text-align: left;
+            font-weight: bold;
+            color: #8d1017;
+        }
+
+        .title a {
+            text-decoration: none;
+            color: #8d1017;
+        }
+
+        .title a:hover {
+            text-decoration: underline;
+        }
+
+        .date {
+            text-align: right;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .list-item:hover {
+            background-color: #f4f4f4;
+        }
+</style>
 </head>
 <body>
     <header>
@@ -59,22 +139,34 @@
             <button id="close-image"><img src="lupa.png"></button>
         </div>
     </header>
+    <h1 style="font-size: 25px;">Za Mlade</h1>
+    <div class="searchboxstie">
+        <input type="text" id="search" placeholder="Išči...">
+    </div>
+    <section class="content">
+        <div id="file-list">
+            <div class="list-item">
+                <span class="title"><a href="novica5.html">SKUPNA ODLOČBA - ŠTUDENTI UPRAVIČENI DO ŽEPNINE</a></span>
+                <span class="date">Do Preklica</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="razpis4.html">SKUPNA ODLOČBA - DIJAKI UPRAVIČENI DO ŽEPNINE</a></span>
+                <span class="date">Do preklica</span>
+            </div>
+    </section>
+</main>
+<script>
+    const searchInput = document.getElementById("search");
+    const fileList = document.getElementById("file-list").children;
 
-    <main>
-        <section class="content">
-            <h1>Za dijake in študente</h1>
-            <p>Pregled vlog in obrazcev za dijake in študente v občini Pesnica.</p>
-
-            <input type="text" id="search" placeholder="Išči..." onkeyup="filterResults()">
-
-            <ul id="form-list">
-                <li>Subvencionirane vozovnice</li>
-                <li>Štipendije</li>
-                <li>Pomoč pri študiju</li>
-            </ul>
-        </section>
-    </main>
-
+    searchInput.addEventListener("keyup", function () {
+        const query = searchInput.value.toLowerCase();
+        Array.from(fileList).forEach(function (file) {
+            const text = file.textContent.toLowerCase();
+            file.style.display = text.includes(query) ? "flex" : "none";
+        });
+    });
+</script>
     <footer style="background: #8d1017; padding: 20px 0; color: white;">
         <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
             <div style="flex: 1; min-width: 200px;">
@@ -102,18 +194,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        function filterResults() {
-            const searchInput = document.getElementById('search').value.toLowerCase();
-            const formList = document.getElementById('form-list');
-            const items = formList.getElementsByTagName('li');
-
-            for (let i = 0; i < items.length; i++) {
-                const text = items[i].textContent.toLowerCase();
-                items[i].style.display = text.includes(searchInput) ? '' : 'none';
-            }
-        }
-    </script>
 </body>
 </html>

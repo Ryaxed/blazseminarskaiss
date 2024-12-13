@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Društva - Lokalno - Pesnica</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+            .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #8d1017;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .project-card {
+            flex: 1;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            color: #8d1017;
+        }
+
+        .links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .links ul li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .links ul li a {
+            text-decoration: none;
+            color: #8d1017;
+        }
+
+        .links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .payment-section img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -62,14 +127,49 @@
 
     <main>
         <section class="content">
-            <h1>Društva</h1>
-            <p>Informacije o društvih v občini Pesnica.</p>
-            <ul>
-                <li>Društvo 1</li>
-                <li>Društvo 2</li>
-                <li>Društvo 3</li>
-            </ul>
+            <h1>Plačilo upravne takse</h1>
+            <div class="payment-section">
+                <img src="upn_taksa.png" alt="UPN QR Potrdilo" style="width: 1000px;">
+            </div>
         </section>
+
+        <section class="content">
+            <h2>Projekti</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>NOO</h3>
+
+                    <div class="links">
+                        <ul>
+                        <li>Oskrba s pitno vodo v Občini Pesnica (Počenik, Ložane)</li>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>ESRR</h3>
+
+                    <div class="links">
+                        <ul>
+                        <li>Medgeneracijski center Pernica</li>
+                        <li>Športni park Pesnica</li>
+                        <li>Pernica poje</li>
+                        <li>Podpora ranljivim skupinam pri urejanju okolja</li>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>EKSRP</h3>
+
+                    <div class="links">
+                    <ul>
+                    <li>TRAJNOSTNA E-MOBILNOST</li>
+                    <li>E-PICIKL</li>
+                    <li>Dodatna turistična ponudba e-koles na SMA Mulec</li>
+                    <li>Igralne površine pri šoli Pesnica – Razgibajmo se</li>
+                </div>
+                </ul>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer style="background: #8d1017; padding: 20px 0; color: white;">

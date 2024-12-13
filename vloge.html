@@ -5,6 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vloge/Obrazci - Pesnica</title>
     <link rel="stylesheet" href="styles.css">
+
+<style>
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #8d1017;
+            margin-bottom: 20px;
+        }
+
+        .searchboxstie {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .searchboxstie input[type="text"] {
+            padding: 10px;
+            font-size: 14px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-item span {
+    padding-left: 20px;
+}
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .title {
+            text-align: left;
+            font-weight: bold;
+            color: #8d1017;
+        }
+
+        .title a {
+            text-decoration: none;
+            color: #8d1017;
+        }
+
+        .title a:hover {
+            text-decoration: underline;
+        }
+
+        .date {
+            text-align: right;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .list-item:hover {
+            background-color: #f4f4f4;
+        }
+</style>
 </head>
 <body>
     <header>
@@ -59,17 +139,67 @@
             <button id="close-image"><img src="lupa.png"></button>
         </div>
     </header>
+    <h1 style="font-size: 25px;">Uradni obrazci</h1>
+    <div class="searchboxstie">
+        <input type="text" id="search" placeholder="Išči po obrazcih...">
+    </div>
+    <section class="content">
+        <div id="file-list">
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=572903">Dokumentacija za pridobitev mnenja za nezahtevne objekte</a></span>
+                <span class="date">Brezplačno</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=342836">Vloga za izdajo dovolilnice za vožnjo v območju prepovedi prometa za tovorna vozila</a></span>
+                <span class="date">Taksa: 22,60 EUR</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=342836">Obrazec za prijavo enkratnega podaljšanja obratovalnega časa gostinskega obrata (kmetije)</a></span>
+                <span class="date">Brezplačno</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=342836">Vloga za sklenitev pogodbe o služnosti</a></span>
+                <span class="date">Brezplačno</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=342836">Vloga za priključitev na javno kanalizacijo</a></span>
+                <span class="date">Taksa: 22,60 EUR</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=342836">Obrazec za prijavo obratovalnega časa gostinskega obrata (kmetije)</a></span>
+                <span class="date">Brezplačno</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=342836">Vloga za izdajo soglasja postavitve turistične in obvestilne signalizacije</a></span>
+                <span class="date">Taksa: 22,60 EUR</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=342836">Vloga za izdajo potrdila o ne/uveljanjanju predkupne pravice na nepremičnini na podlagi predpisov</a></span>
+                <span class="date">Brezplačno</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=342836">Vloga za odmero komunalnega prispevka</a></span>
+                <span class="date">Taksa: 22,60 EUR</span>
+            </div>
+            <div class="list-item">
+                <span class="title"><a href="https://www.pesnica.si/DownloadFile?id=342836">Vloga za izdajo soglasja za priklop na javni vodovod</a></span>
+                <span class="date">Brezplačno</span>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    const searchInput = document.getElementById("search");
+    const fileList = document.getElementById("file-list").children;
 
-    <main>
-        <section class="content">
-            <h1>Vloge/Obrazci</h1>
-            <ul class="sub-links">
-                <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
-                <li><a href="vloge_uradne.html">Uradne vloge in obrazci</a></li>
-            </ul>
-        </section>
-    </main>
-
+    searchInput.addEventListener("keyup", function () {
+        const query = searchInput.value.toLowerCase();
+        Array.from(fileList).forEach(function (file) {
+            const text = file.textContent.toLowerCase();
+            file.style.display = text.includes(query) ? "flex" : "none";
+        });
+    });
+</script>
     <footer style="background: #8d1017; padding: 20px 0; color: white;">
         <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
             <div style="flex: 1; min-width: 200px;">
