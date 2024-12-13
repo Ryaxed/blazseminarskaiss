@@ -184,7 +184,14 @@ body {
 header .menu-toggle {
     display: none;
 }
-
+.search-box button {
+    flex: 0 0 auto; 
+    background: #8d1017;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
     header {
@@ -196,7 +203,10 @@ header .menu-toggle {
         gap: 10px; 
     }
 
+    .search-box {
 
+        background: #8d1017;
+    }
     header .logo {
         flex: 0 0 auto;
     }
@@ -211,11 +221,27 @@ header .menu-toggle {
         cursor: pointer;
     }
 
-   
+    
     .search-box {
-        width: 50%;
+        display: flex; 
+        align-items: center;
+        width: 20%;
         margin-left: auto;
-        order: 1; 
+    }
+
+    .search-box input {
+        flex: 1; 
+        width: 50%;
+        padding: 5px;
+    }
+
+    .search-box button {
+        flex: 0 0 auto; 
+        background: #8d1017;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
     }
 
     header .main-nav ul {
@@ -235,15 +261,27 @@ header .menu-toggle {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .search-box {
-        width: 20%; 
+        display: flex; 
+        align-items: center;
+        width: 20%;
         margin-left: auto;
     }
 
     .search-box input {
+        flex: 1; 
         width: 50%;
         padding: 5px;
+    }
+
+    .search-box button {
+        flex: 0 0 auto; 
+        background: #8d1017;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
     }
     header {
         display: flex;
