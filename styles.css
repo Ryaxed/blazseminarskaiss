@@ -217,7 +217,7 @@ header .menu-toggle {
     width: 200px; /* Adjust as needed */
 }
 
-/* Show submenu when the parent <li> has the 'open' class */
+/* Show submenu when the parent <li> has the 'open' class aaa */
 .main-nav li.open > ul {
     display: block;
 }
