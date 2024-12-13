@@ -233,25 +233,34 @@ header .menu-toggle {
 @media (max-width: 768px) {
 
     .main-nav ul {
-        display: flex; 
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-        background-color: #8d1017;
+        display: flex; /* Keep the horizontal layout */
+        flex-wrap: wrap; /* Allow wrapping if there's not enough space */
+        justify-content: center; /* Center-align all menu items */
+        padding: 10px 0; /* Add some vertical padding */
+        background-color: #8d1017; /* Full background color */
     }
-
+    
     .main-nav ul li {
-        margin: 0;
-        padding: 10px 15px; 
-        font-size: 14px; 
-        text-align: center; 
-        flex: 1 1 auto; 
+        margin: 5px 0; /* Add some vertical margin for spacing */
+        padding: 10px 20px; /* Slightly increase padding for larger boxes */
+        font-size: 14px; /* Keep font size readable */
+        text-align: center; /* Keep text centered */
+        flex: 1 1 auto; /* Items adjust to available space */
+        min-width: 140px; /* Ensure items have enough space for longer text */
     }
-
+    
     .main-nav ul li a {
-        color: white; 
-        text-decoration: none; 
+        color: white; /* Keep the text white */
+        text-decoration: none; /* Remove underline */
+        display: block; /* Make the link occupy full clickable area */
+        background-color: #8d1017; /* Match the menu background */
+        padding: 8px; /* Increase inner padding for larger clickable area */
+        border-radius: 5px; /* Add some subtle rounding for aesthetics */
+        transition: background-color 0.3s ease; /* Smooth hover effect */
+        word-wrap: break-word; /* Break long words if necessary */
     }
+    
+
 
     header {
         display: flex;
