@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Občinska uprava - Občina Pesnica</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Občina Pesnica - Varstvo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .section-header {
+            background: #999191;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .section-content {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+        }
+        .section-content.visible {
+            display: block;
+        }
+        button {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            background: #999191;
+            color: white;
+            border-radius: 3px;
+        }
+    </style>
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.classList.toggle('visible');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png"   alt="Pesnica Logo" /></a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="obcina.html">Občina</a>
+                    <ul>
+                        <li><a href="obcina_glavni_podatki.html">Glavni podatki</a></li>
+                        <li><a href="obcina_obcinska_uprava.html">Občinska uprava</a></li>
+                        <li><a href="obcina_katalog_informacij.html">Katalog informacij</a></li>
+                        <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
+                    </ul>
+                </li>
+                <li><a href="organi.html">Organi</a>
+                    <ul>
+                        <li><a href="organi_glavni_organi.html">Glavni organi</a></li>
+                        <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
+                        <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
+                    </ul>
+                </li>
+                <li><a href="novice.html">Novice</a>
+                    <ul>
+                        <li><a href="novice_novo.html">Novo</a></li>
+                        <li><a href="novice_razpisi.html">Razpisi</a></li>
+                        <li><a href="novice_pomembno.html">Pomembno</a></li>
+                    </ul>
+                </li>
+                <li><a href="lokalno.html">Lokalno</a>
+                    <ul>
+                        <li><a href="lokalno_drustva.html">Društva</a></li>
+                        <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
+                        <li><a href="lokalno_zdravstvo.html">Zdravstvo</a></li>
+                        <li><a href="lokalno_donatorstvo.html">Donatorstvo</a></li>
+                    </ul>
+                </li>
+                <li><a href="vloge.html">Vloge/Obrazci</a>
+                    <ul>
+                        <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
+                        <li><a href="vloge_uradne.html">Uradne vloge in obrazci</a></li>
+                    </ul>
+                </li>
+                <li><a href="ostalo.html">Ostalo</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-box" style="margin-top: 10px; position: absolute; right: 20px; top: 20px;">
+            <input type="text" placeholder="Išči...">
+            <button id="close-image"><img src="lupa.png"></button>
+        </div>
+    </header>
+
+    <main>
+        <body>
+            <div class="container">
+                <h2>Varstvo - Občina Pesnica</h2>
+        
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('section1')">
+                        Medobčinska Inšpekcija
+                    </div>
+                    <div id="section1" class="section-content">
+                        <p><strong>Vodja:</strong> Nina MIKL, Inšpektorica svetnica</p>
+                        <p><strong>E-naslov:</strong> <a href="mailto:medobcinska.inspekcija@maribor.si">medobcinska.inspekcija@maribor.si</a></p>
+                        <p><strong>Spletna stran:</strong> <a href="https://sou-maribor.si/medobcinska-inspekcija">sou-maribor.si/medobcinska-inspekcija</a></p>
+                        <p><strong>Telefon:</strong> 02 2201 516</p>
+                        <h4>Naloge:</h4>
+                        <ul>
+                            <li>Izvajanje inšpekcijskega nadzora nad zakoni in občinskimi predpisi.</li>
+                            <li>Vodenje inšpekcijskih postopkov in izdajanje upravnih aktov.</li>
+                            <li>Upoštevanje zakonodaje o cestah, varstvu okolja, gradbeni zakon in drugo.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('section2')">
+                        Medobčinsko Redarstvo
+                    </div>
+                    <div id="section2" class="section-content">
+                        <p><strong>Vodja:</strong> Uroš KOSI</p>
+                        <p><strong>E-naslov:</strong> <a href="mailto:medobcinsko.redarstvo@maribor.si">medobcinsko.redarstvo@maribor.si</a></p>
+                        <p><strong>Spletna stran:</strong> <a href="https://sou-maribor.si/medobcinsko-redarstvo">sou-maribor.si/medobcinsko-redarstvo</a></p>
+                        <p><strong>Telefon:</strong> 02 2201 527</p>
+                        <h4>Naloge:</h4>
+                        <ul>
+                            <li>Nadzor prometa in varnosti v naseljih.</li>
+                            <li>Zaščita javnih površin in ohranjanje javnega reda.</li>
+                            <li>Vodenje prekrškovnih postopkov.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('section3')">
+                        Ostale Informacije
+                    </div>
+                    <div id="section3" class="section-content">
+                        <p>Za dodatne informacije se obrnite na občinsko upravo.</p>
+                        <p><strong>Kontakt:</strong> 02 654 23 38</p>
+                    </div>
+                </div>
+                    <div class="section">
+                    <div class="section-header" onclick="toggleSection('section4')">
+                        Upravljavec Osebnih Podatkov
+                    </div>
+                    <div id="section4" class="section-content">
+                        <p>Upravljavec osebnih podatkov je Občina Pesnica, Pesnica pri Mariboru 43a, 2211 Pesnica pri Mariboru.</p>
+                        <p><strong>ID za DDV:</strong> 51503492</p>
+                        <p><strong>Matična številka:</strong> 5884098000</p>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('section5')">
+                        Pooblaščena Oseba za Varstvo Osebnih Podatkov
+                    </div>
+                    <div id="section5" class="section-content">
+                        <p><strong>Podjetje:</strong> DATAINFO.SI, d.o.o.</p>
+                        <p><strong>Naslov:</strong> Tržaška cesta 85, SI-2000 Maribor</p>
+                        <p><strong>Spletna stran:</strong> <a href="http://www.datainfo.si" target="_blank">www.datainfo.si</a></p>
+                        <p><strong>E-naslov:</strong> <a href="mailto:dpo@datainfo.si">dpo@datainfo.si</a></p>
+                        <p><strong>Telefon:</strong> +386 (0) 2 620 4 300</p>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('section6')">
+                        Politika Varstva Osebnih Podatkov
+                    </div>
+                    <div id="section6" class="section-content">
+                        <p>Več informacij najdete v <a href="https://www.pesnica.si/GDPR" target="_blank">Politiki zasebnosti</a>.</p>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('section7')">
+                        Evidenca Dejavnosti Obdelav Osebnih Podatkov
+                    </div>
+                    <div id="section7" class="section-content">
+                        <p>Vsebina je v pripravi.</p>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('section8')">
+                        Pravice Posameznikov
+                    </div>
+                    <div id="section8" class="section-content">
+                        <p>Informacije o pravicah posameznikov pri upravljanju osebnih podatkov so na voljo v <a href="https://www.pesnica.si/GDPR" target="_blank">Politiki zasebnosti</a>.</p>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('section9')">
+                        Obrazci s Področja Varstva Osebnih Podatkov
+                    </div>
+                    <div id="section9" class="section-content">
+                        <p>Za dodatne obrazce obiščite <a href="https://www.ip-rs.si/" target="_blank">spletno stran Informacijskega pooblaščenca RS</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </main>
+
+    <footer style="background: #8d1017; padding: 20px 0; color: white;">
+        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">KONTAKT</h3>
+                <p>Občina Pesnica</p>
+                <p>Pesnica pri Mariboru 43a</p>
+                <p>2211 Pesnica pri Mariboru</p>
+                <p>📞 02 654 23 09</p>
+                <p>📠 02 654 23 19</p>
+                <p>📧 <a href="mailto:obcina.pesnica@pesnica.si" style="text-decoration: none; color: white;">obcina.pesnica@pesnica.si</a></p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">URADNE URE - ZA STRANKE</h3>
+                <p>Ponedeljek: 8.00 - 12.00, 13.00 - 15.00</p>
+                <p>Sreda: 8.00 - 12.00, 13.00 - 17.00</p>
+                <p>Petek: 8.00 - 12.00</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">POSLOVNI ČAS OBČINE</h3>
+                <p>Ponedeljek: 7.00 - 15.00</p>
+                <p>Torek: 7.00 - 15.00</p>
+                <p>Sreda: 7.00 - 17.00</p>
+                <p>Četrtek: 7.00 - 15.00</p>
+                <p>Petek: 7.00 - 13.00</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

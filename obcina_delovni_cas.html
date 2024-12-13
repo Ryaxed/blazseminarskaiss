@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delovni čas in kontakt - Občina Pesnica</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+ main {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h1 {
+            color: #8d1017;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            margin: 5px 0;
+        }
+
+
+        .weekly-schedule {
+            margin-top: 20px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .weekly-schedule h2 {
+            background-color: #bdbdbd;
+            color: #8d1017;
+            margin: -15px -15px 15px -15px;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+
+        .day {
+            background: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .day:hover {
+            background: #e0e0e0;
+        }
+
+        .day-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+    </style>
+</head>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png"   alt="Pesnica Logo" /></a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="obcina.html">Občina</a>
+                    <ul>
+                        <li><a href="obcina_glavni_podatki.html">Glavni podatki</a></li>
+                        <li><a href="obcina_obcinska_uprava.html">Občinska uprava</a></li>
+                        <li><a href="obcina_katalog_informacij.html">Katalog informacij</a></li>
+                        <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
+                    </ul>
+                </li>
+                <li><a href="organi.html">Organi</a>
+                    <ul>
+                        <li><a href="organi_glavni_organi.html">Glavni organi</a></li>
+                        <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
+                        <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
+                    </ul>
+                </li>
+                <li><a href="novice.html">Novice</a>
+                    <ul>
+                        <li><a href="novice_novo.html">Novo</a></li>
+                        <li><a href="novice_razpisi.html">Razpisi</a></li>
+                        <li><a href="novice_pomembno.html">Pomembno</a></li>
+                    </ul>
+                </li>
+                <li><a href="lokalno.html">Lokalno</a>
+                    <ul>
+                        <li><a href="lokalno_drustva.html">Društva</a></li>
+                        <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
+                        <li><a href="lokalno_zdravstvo.html">Zdravstvo</a></li>
+                        <li><a href="lokalno_donatorstvo.html">Donatorstvo</a></li>
+                    </ul>
+                </li>
+                <li><a href="vloge.html">Vloge/Obrazci</a>
+                    <ul>
+                        <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
+                        <li><a href="vloge_uradne.html">Uradne vloge in obrazci</a></li>
+                    </ul>
+                </li>
+                <li><a href="ostalo.html">Ostalo</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-box" style="margin-top: 10px; position: absolute; right: 20px; top: 20px;">
+            <input type="text" placeholder="Išči...">
+            <button id="close-image"><img src="lupa.png"></button>
+        </div>
+    </header>
+
+    <main>
+        <body>
+            <div class="container">
+                <h1>Uradne ure občine</h1>
+        
+                <div class="working-hours">
+                    <div>
+                        <h2>Uradne ure - za stranke</h2>
+                        <ul>
+                            <li><strong>Ponedeljek:</strong> 8.00 - 12.00, 13.00 - 15.00</li>
+                            <li><strong>Sreda:</strong> 8.00 - 12.00, 13.00 - 17.00</li>
+                            <li><strong>Petek:</strong> 8.00 - 12.00</li>
+                        </ul>
+                    </div>
+        
+                    <div>
+                        <h2>Poslovni čas občine</h2>
+                        <ul>
+                            <li><strong>Ponedeljek:</strong> 7.00 - 15.00</li>
+                            <li><strong>Torek:</strong> 7.00 - 15.00</li>
+                            <li><strong>Sreda:</strong> 7.00 - 17.00</li>
+                            <li><strong>Četrtek:</strong> 7.00 - 15.00</li>
+                            <li><strong>Petek:</strong> 7.00 - 13.00</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="weekly-schedule">
+                    <h2>Uradne ure za teden (6.1 - 10.1) </h2>
+                    <div class="day" onclick="toggleDayContent(this)">
+                        <strong>Ponedeljek:</strong>
+                        <div class="day-content">
+                            <p>Od 8.00 do 12.00 in od 13.00 do 15.00</p>
+                        </div>
+                    </div>
+                    <div class="day" onclick="toggleDayContent(this)">
+                        <strong>Torek:</strong>
+                        <div class="day-content">
+                            <p>Ni uradnih ur</p>
+                        </div>
+                    </div>
+                    <div class="day" onclick="toggleDayContent(this)">
+                        <strong>Sreda:</strong>
+                        <div class="day-content">
+                            <p>Od 8.00 do 12.00 in od 13.00 do 17.00</p>
+                        </div>
+                    </div>
+                    <div class="day" onclick="toggleDayContent(this)">
+                        <strong>Četrtek:</strong>
+                        <div class="day-content">
+                            <p>Ni uradnih ur</p>
+                        </div>
+                    </div>
+                    <div class="day" onclick="toggleDayContent(this)">
+                        <strong>Petek:</strong>
+                        <div class="day-content">
+                            <p>Od 8.00 do 12.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <h2>Kontakt</h2>
+                    <p><strong>Naslov:</strong> Pesnica pri Mariboru 43a, 2211 Pesnica pri Mariboru</p>
+                    <p><strong>Telefon:</strong> 02 654 23 09</p>
+                    <p><strong>Fax:</strong> 02 654 23 19</p>
+                    <p><strong>Email:</strong> <a href="mailto:obcina.pesnica@pesnica.si">obcina.pesnica@pesnica.si</a></p>
+                </div>
+            </div>
+            <script>
+                function toggleDayContent(dayElement) {
+                    const content = dayElement.querySelector('.day-content');
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                }
+            </script>
+    </body>
+    </main>
+
+    <footer style="background: #8d1017; padding: 20px 0; color: white;">
+        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">KONTAKT</h3>
+                <p>Občina Pesnica</p>
+                <p>Pesnica pri Mariboru 43a</p>
+                <p>2211 Pesnica pri Mariboru</p>
+                <p>📞 02 654 23 09</p>
+                <p>📠 02 654 23 19</p>
+                <p>📧 <a href="mailto:obcina.pesnica@pesnica.si" style="text-decoration: none; color: white;">obcina.pesnica@pesnica.si</a></p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">URADNE URE - ZA STRANKE</h3>
+                <p>Ponedeljek: 8.00 - 12.00, 13.00 - 15.00</p>
+                <p>Sreda: 8.00 - 12.00, 13.00 - 17.00</p>
+                <p>Petek: 8.00 - 12.00</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">POSLOVNI ČAS OBČINE</h3>
+                <p>Ponedeljek: 7.00 - 15.00</p>
+                <p>Torek: 7.00 - 15.00</p>
+                <p>Sreda: 7.00 - 17.00</p>
+                <p>Četrtek: 7.00 - 15.00</p>
+                <p>Petek: 7.00 - 13.00</p>
+            </div>
+        </div>
+    </footer>
+</html>

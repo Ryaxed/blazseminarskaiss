@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesnica - Prenovljena Spletna Stran</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #close-image img {
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+}
+.event-details {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-details h2, .event-details h3 {
+    color: #8d1017;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.event-details span, .event-details strong {
+    font-weight: bold;
+    color: #333;
+}
+main {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #8d1017;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .documents {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.documents h2 {
+    font-size: 20px;
+    color: #8d1017;
+    margin-bottom: 20px;
+}
+
+
+.download-all:hover {
+    background: #aa2d2f;
+}
+
+.document-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.document-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.document-list .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.document-list a {
+    text-decoration: none;
+    color: #8d1017;
+    font-weight: bold;
+}
+
+.document-list a:hover {
+    text-decoration: underline;
+}
+
+.document-list .size {
+    margin-left: auto;
+    font-size: 12px;
+    color: #555;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Pesnica Logo" /></a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="obcina.html">Občina</a>
+                    <ul>
+                        <li><a href="obcina.html">Občinska uprava</a></li>
+                        <li><a href="obcina_varstvo.html">Varstvo podatkov</a></li>
+                        <li><a href="obcina_katalog_informacij.html">Katalog informacij</a></li>
+                        <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
+                    </ul>
+                </li>
+                <li><a href="organi.html">Organi</a>
+                    <ul>
+                        <li><a href="organi.html">Glavni organi</a></li>
+                        <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
+                        <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
+                    </ul>
+                </li>
+                <li><a href="novice.html">Novice</a>
+                    <ul>
+                        <li><a href="novice.html">Novo</a></li>
+                        <li><a href="novice_razpisi.html">Razpisi</a></li>
+                        <li><a href="novice_pomembno.html">Pomembno</a></li>
+                    </ul>
+                </li>
+                <li><a href="lokalno.html">Lokalno</a>
+                    <ul>
+                        <li><a href="lokalno_drustva.html">Društva</a></li>
+                        <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
+                        <li><a href="lokalno_zdravstvo.html">Zdravstvo</a></li>
+                        <li><a href="lokalno_donatorstvo.html">Donatorstvo</a></li>
+                    </ul>
+                </li>
+                <li><a href="vloge.html">Vloge/Obrazci</a>
+                    <ul>
+                        <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
+                        <li><a href="vloge_uradne.html">Uradne vloge in obrazci</a></li>
+                    </ul>
+                </li>
+                <li><a href="ostalo.html">Ostalo</a></li>
+            </ul>
+        </nav>
+        <div class="search-box" style="margin-top: 10px; position: absolute; right: 20px; top: 20px;">
+            <input type="text" placeholder="Išči...">
+            <button id="close-image"><img src="lupa.png"></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>OBČINA PESNICA ZBIRA VLOGE ZA OCENJEVANJE ŠKODE ZARADI POSLEDIC POZEBE MED 17. IN 22. APRILOM 2024</h1>
+            <p>
+                Občina Pesnica obvešča vse kmete, da zbira vloge za ocenjevanje škode, ki je nastala zaradi pozebe v trajnih nasadih med 17. in 22. aprilom 2024.
+Vloge je potrebno oddati na občino do petka, 22. novembra 2024, do 12. ure.
+ 
+Prosimo vse vlagatelje, da si podrobno preberejo navodila, ki so v prilogi, ter seznam kmetijskih pridelkov, ki so predmet pozebe.
+Vloge izpolnite natančno z vsemi potrebnimi podatki.  
+Vloge oddajte Moniki Buser, ki je dosegljiva za vsa vprašanja na telefon 02 654 2 310 ali na elektronski naslov monika.buser@pesnica.si.
+ 
+Občina je pristojna le za zbiranje vlog oškodovancev in vnos le teh v sistem Ajda.
+ 
+Pojasnilo Ministrstva za obrambo, Uprave RS za zaščito in reševanje:
+Na podlagi izdelane predhodne ocene škode na trajnih nasadih (priznanih kultur) Ministrstva za kmetijstvo, gozdarstvo in prehrano, se prične z zbiranjem vlog oškodovancev, ki so utrpeli škodo zaradi posledic pozebe med 17. in 22. aprilom 2024 na prizadetih območjih katastrskih občin in prizadetih kulturah. Ocena škode bo za reševanje potreb pri izvajanju ukrepov kmetijske politike Ministrstva za kmetijstvo, gozdarstvo in prehrano. Na podlagi ocenjene škode bodo imeli oškodovanci možnost uveljavljanja znižanja oziroma odpisa prispevkov za pokojninsko in invalidsko zavarovanje, znižanja najemnin pri Skladu kmetijskih zemljišč in gozdov Republike Slovenije ter uveljavljanja višje sile v okviru ukrepov tekoče kmetijske politike. Ocenjena škoda bo tudi podlaga za oblikovanje pomoči najbolj prizadetim kmetijskim gospodarstvom.
+ 
+Več v priloženi dokumentaciji.
+            </p>
+            <section class="event-details">
+                <h3>Osnovni podatki</h3>
+                <p><strong>Objavljeno na spletu:</strong> 04.11.2024</p>
+                <p><strong>Aktualno do:</strong> 22.11.2024 do 12:00</p>
+                <h3>Kontakt osebe</h3>
+                <p><strong>E-pošta:</strong> monika.buser@pesnica.si</p>
+                <p><strong>Tel.št:</strong> 02 654 2 310</p>
+            </section>
+            <section class="documents">
+                <h2>Dokumenti, priloge</h2>
+                <ul class="document-list">
+                    <li>
+                        <img src="pdf-icon.png" alt="PDF ikona" class="icon">
+                        <a href="https://www.pesnica.si/DownloadFile?id=743317" target="_blank">
+                            
+Navodilo za ocenjevanje - pozeba med 17 in 24 aprilom 2024_</a>
+                    
+                    </li>
+                    <li>
+                        <img src="pdf-icon.png" alt="PDF ikona" class="icon">
+                        <a href="https://www.pesnica.si/DownloadFile?id=743316" target="_blank">
+                            obrazec 2</a>
+                    
+                    </li>
+                    <li>
+                        <img src="pdf-icon.png" alt="PDF ikona" class="icon">
+                        <a href="https://www.pesnica.si/DownloadFile?id=743315" target="_blank">
+                            
+KulturePozeba2024</a>
+                    
+                    </li>
+                </ul>
+            </section>
+        </div>
+       
+    </main>
+
+    <footer style="background: #8d1017; padding: 20px 0; color: white;">
+        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">KONTAKT</h3>
+                <p>Občina Pesnica</p>
+                <p>Pesnica pri Mariboru 43a</p>
+                <p>2211 Pesnica pri Mariboru</p>
+                <p>📞 02 654 23 09</p>
+                <p>📠 02 654 23 19</p>
+                <p>📧 <a href="mailto:obcina.pesnica@pesnica.si" style="text-decoration: none; color: white;">obcina.pesnica@pesnica.si</a></p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">URADNE URE - ZA STRANKE</h3>
+                <p>Ponedeljek: 8.00 - 12.00, 13.00 - 15.00</p>
+                <p>Sreda: 8.00 - 12.00, 13.00 - 17.00</p>
+                <p>Petek: 8.00 - 12.00</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">POSLOVNI ČAS OBČINE</h3>
+                <p>Ponedeljek: 7.00 - 15.00</p>
+                <p>Torek: 7.00 - 15.00</p>
+                <p>Sreda: 7.00 - 17.00</p>
+                <p>Četrtek: 7.00 - 15.00</p>
+                <p>Petek: 7.00 - 13.00</p>
+            </div>
+        </div>
+    </footer>

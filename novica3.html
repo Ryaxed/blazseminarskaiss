@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesnica - Prenovljena Spletna Stran</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #close-image img {
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+}
+
+main {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #8d1017;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+        .documents {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.documents h2 {
+    font-size: 20px;
+    color: #8d1017;
+    margin-bottom: 20px;
+}
+
+.download-all {
+    display: inline-block;
+    background: #8d1017;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.download-all:hover {
+    background: #aa2d2f;
+}
+
+.document-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.document-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.document-list .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.document-list a {
+    text-decoration: none;
+    color: #8d1017;
+    font-weight: bold;
+}
+
+.document-list a:hover {
+    text-decoration: underline;
+}
+
+.document-list .size {
+    margin-left: auto;
+    font-size: 12px;
+    color: #555;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Pesnica Logo" /></a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="obcina.html">Občina</a>
+                    <ul>
+                        <li><a href="obcina.html">Občinska uprava</a></li>
+                        <li><a href="obcina_varstvo.html">Varstvo podatkov</a></li>
+                        <li><a href="obcina_katalog_informacij.html">Katalog informacij</a></li>
+                        <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
+                    </ul>
+                </li>
+                <li><a href="organi.html">Organi</a>
+                    <ul>
+                        <li><a href="organi.html">Glavni organi</a></li>
+                        <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
+                        <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
+                    </ul>
+                </li>
+                <li><a href="novice.html">Novice</a>
+                    <ul>
+                        <li><a href="novice.html">Novo</a></li>
+                        <li><a href="novice_razpisi.html">Razpisi</a></li>
+                        <li><a href="novice_pomembno.html">Pomembno</a></li>
+                    </ul>
+                </li>
+                <li><a href="lokalno.html">Lokalno</a>
+                    <ul>
+                        <li><a href="lokalno_drustva.html">Društva</a></li>
+                        <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
+                        <li><a href="lokalno_zdravstvo.html">Zdravstvo</a></li>
+                        <li><a href="lokalno_donatorstvo.html">Donatorstvo</a></li>
+                    </ul>
+                </li>
+                <li><a href="vloge.html">Vloge/Obrazci</a>
+                    <ul>
+                        <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
+                        <li><a href="vloge_uradne.html">Uradne vloge in obrazci</a></li>
+                    </ul>
+                </li>
+                <li><a href="ostalo.html">Ostalo</a></li>
+            </ul>
+        </nav>
+        <div class="search-box" style="margin-top: 10px; position: absolute; right: 20px; top: 20px;">
+            <input type="text" placeholder="Išči...">
+            <button id="close-image"><img src="lupa.png"></button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Naslov novice 1</h1>
+            <div class="image">
+                <img src="news3.jpg" alt="Slika novice 1">
+            </div>
+            <p>
+                Spoštovani starši, občani, donatorji,
+            verjamemo, da želimo vsi starši svojim otrokom omogočiti čim več. Želimo si, da bi vsi imeli enake možnosti in priložnosti že od malih nog, predvsem pa v vrtčevskih in osnovnošolskih letih, ki so ključna za njihov razvoj in izobraževanje. V tem obdobju so naši otroci tudi bolj občutljivi in se lahko težje soočajo z dojemanjem razlik med sovrstniki, ne glede na to kako se sami trudimo za njihovo dobrobit. Žal finančne možnosti pri tem niso v vseh družinah enake, zato je Osnovna šola Pesnica obudila šolski sklad.
+ 
+Pred kratkim nas je razveselila novica, da lahko sredstva za socialni del šolskega sklada pridobimo tudi iz donacij posameznega rezidenta iz namenitve dela dohodnine in sicer do največ 0,3 %. Za 1 % dohodnine, ki vam jo odtegne država, lahko namreč sami določite organizacije, ki bodo ta denar prejele, sicer sredstva ostanejo državi. Finančna sredstva, zbrana na ta način, lahko namenimo izključno učencem iz manj vzpodbudnih okolij. Zato vas vabimo, da šolskemu skladu Osnovne šole Pesnica namenite do 0,3 % dela dohodnine že za letošnje leto in do konca leta izpolnite in oddate obrazec v priponki ali to naredite preko portala eDavki.
+Sredstva iz namenitve dela dohodnine bodo s strani države šolskemu skladu nakazana šele septembra 2025, v skladu pa si želimo, da bi lahko otrokom že v tem šolskem letu omogočili čim več, zato vse tiste, ki želite in zmorete prispevati, vabimo, da postanete donator in izpolnite pristopno izjavo za donacije v sklad šole, vrtca ali/in socialni sklad.
+ 
+Sredstva, zbrana s prispevki staršev, občanov, donacij in drugih virov, bodo namenjena pomoči socialno šibkim učencem za plačilo storitev in pripomočkov, plačilo dejavnosti, ki se ne financirajo iz javnih sredstev, nadarjenim učencem in učencem s posebnimi potrebami.
+Verjamemo, da lahko z malimi koraki in prispevki naredimo veliko za naše vrtčevske in šolske otroke, predvsem tiste, ki jim bo vaša pomoč omogočila udeležbo na dejavnostih za katere bi sicer bili prikrajšani. Tako pa se bodo lahko razvijali, rasli in učili skupaj s sovrstniki, pridobili izjemne učne izkušnje v spodbudnem okolju, predvsem pa začutili, da so del skupnosti, ki jih spodbuja in ji je mar za to, da imajo vsi enake priložnosti.
+ 
+Jerneja Podlesek v imenu šolskega sklada Osnovne šole Pesnica
+            </p>
+            <section class="documents">
+                <h2>Dokumenti, priloge</h2>
+                <ul class="document-list">
+                    <li>
+                        <img src="pdf-icon.png" alt="PDF ikona" class="icon">
+                        <a href="https://www.pesnica.si/DownloadFile?id=751625" target="_blank">Prošnja za donacije</a>
+                    
+                    </li>
+                    <li>
+                        <img src="pdf-icon.png" alt="PDF ikona" class="icon">
+                        <a href="https://www.pesnica.si/DownloadFile?id=751621" target="_blank">Navodila za izpolnjevanje zahteve za namenitev dela dohodnine za donacije</a>
+                    
+                    </li>
+                    <li>
+                        <img src="pdf-icon.png" alt="PDF ikona" class="icon">
+                        <a href="https://www.pesnica.si/DownloadFile?id=751622" target="_blank">Pristopna izjava - šolski sklad - šola</a>
+                    
+                    </li>
+                    <li>
+                        <img src="pdf-icon.png" alt="PDF ikona" class="icon">
+                        <a href="https://www.pesnica.si/DownloadFile?id=751624" target="_blank">Zahteva za namenitev dela dohodnine za donacije</a>
+                    
+                    </li>
+                    <li>
+                        <img src="pdf-icon.png" alt="PDF ikona" class="icon">
+                        <a href="https://www.pesnica.si/DownloadFile?id=751623" target="_blank">Pristopna izjava - šolski sklad - vrtec</a>
+                     
+                    </li>
+                </ul>
+            </section>
+        </div>
+        
+    </main>
+    
+
+    <footer style="background: #8d1017; padding: 20px 0; color: white;">
+        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">KONTAKT</h3>
+                <p>Občina Pesnica</p>
+                <p>Pesnica pri Mariboru 43a</p>
+                <p>2211 Pesnica pri Mariboru</p>
+                <p>📞 02 654 23 09</p>
+                <p>📠 02 654 23 19</p>
+                <p>📧 <a href="mailto:obcina.pesnica@pesnica.si" style="text-decoration: none; color: white;">obcina.pesnica@pesnica.si</a></p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">URADNE URE - ZA STRANKE</h3>
+                <p>Ponedeljek: 8.00 - 12.00, 13.00 - 15.00</p>
+                <p>Sreda: 8.00 - 12.00, 13.00 - 17.00</p>
+                <p>Petek: 8.00 - 12.00</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">POSLOVNI ČAS OBČINE</h3>
+                <p>Ponedeljek: 7.00 - 15.00</p>
+                <p>Torek: 7.00 - 15.00</p>
+                <p>Sreda: 7.00 - 17.00</p>
+                <p>Četrtek: 7.00 - 15.00</p>
+                <p>Petek: 7.00 - 13.00</p>
+            </div>
+        </div>
+    </footer>

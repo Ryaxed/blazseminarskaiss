@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Društva - Lokalno - Pesnica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Pesnica Logo" />
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="obcina.html">Občina</a></li>
+                <li><a href="organi.html">Organi</a></li>
+                <li><a href="novice.html">Novice</a></li>
+                <li><a href="lokalno.html">Lokalno</a></li>
+                <li><a href="vloge.html">Vloge/Obrazci</a></li>
+                <li><a href="ostalo.html">Ostalo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h1>Društva</h1>
+            <p>Informacije o društvih v občini Pesnica.</p>
+            <ul>
+                <li>Društvo 1</li>
+                <li>Društvo 2</li>
+                <li>Društvo 3</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Pesnica 123, 2201 Pesnica</p>
+            <p>Email: info@pesnica.si</p>
+        </div>
+    </footer>
+</body>
+</html>

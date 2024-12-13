@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesnica - Prenovljena Spletna Stran</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #close-image img {
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .banner-image img {
+        height: auto;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .news-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .latest-razpisi {
+        width: 90%;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        margin-top: auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header .main-nav ul {
+        gap: 5px;
+    }
+
+    .news-row {
+        gap: 10px;
+    }
+
+    .latest-razpisi {
+        width: 100%;
+    }
+}
+
+</style>
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Pesnica Logo" /></a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="obcina.html">Občina</a>
+                    <ul>
+                        <li><a href="obcina.html">Občinska uprava</a></li>
+                        <li><a href="obcina_varstvo.html">Varstvo podatkov</a></li>
+                        <li><a href="obcina_katalog_informacij.html">Katalog informacij</a></li>
+                        <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
+                    </ul>
+                </li>
+                <li><a href="organi.html">Organi</a>
+                    <ul>
+                        <li><a href="organi.html">Glavni organi</a></li>
+                        <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
+                        <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
+                    </ul>
+                </li>
+                <li><a href="novice.html">Novice</a>
+                    <ul>
+                        <li><a href="novice.html">Novo</a></li>
+                        <li><a href="novice_razpisi.html">Razpisi</a></li>
+                    </ul>
+                </li>
+                <li><a href="lokalno_drustva.html">Lokalno</a>
+                    <ul>
+                        <li><a href="lokalno_drustva.html">Društva</a></li>
+                        <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
+                        <li><a href="lokalno_zdravstvo.html">Zdravstvo</a></li>
+                        <li><a href="lokalno_donatorstvo.html">Donatorstvo</a></li>
+                    </ul>
+                </li>
+                <li><a href="vloge.html">Vloge/Obrazci</a>
+                    <ul>
+                        <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
+                        <li><a href="vloge.html">Uradne vloge in obrazci</a></li>
+                    </ul>
+                </li>
+                <li><a href="ostalo.html">Ostalo</a></li>
+            </ul>
+        </nav>
+        <div class="search-box" style="margin-top: 10px; position: absolute; right: 20px; top: 20px;">
+            <input type="text" placeholder="Išči...">
+            <button id="close-image"><img src="lupa.png"></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 style="color:black">Dobrodošli na spletni strani občine Pesnica</h1>
+            <p style="color:black">Preverite najnovejše novice, vloge in informacije o občini.</p>
+        </section>
+
+        <section class="banner-image">
+            <img src="banner.jpg" alt="Pesnica panorama" style="width: 100%; height: 600px; object-fit: cover;">
+        </section>
+
+        <section class="content">
+            <h2>Kako vam lahko pomagamo?</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3><a href="obcina_delovni_cas.html">Kontakt</a></h3>
+                </div>
+                <div class="card">
+                    <h3><a href="vloge_dijaki_studenti.html">Vloge za mlade</a></h3>
+                </div>
+                <div class="card">
+                    <h3><a href="vloge_uradne.html">Vloge za odrasle</a></h3>
+                </div>
+                <div class="card">
+                    <h3><a href="novice_pomembno.html">Pomembno</a></h3>
+                </div>
+                <div class="card">
+                    <h3><a href="lokalno.html">Lokalno dogajanje</a></h3>
+                </div>
+            </div>
+        </section>
+        <br><br><br>
+
+        <section class="latest-news">
+            <h2 style="padding-left: 10px;">Zadnje novice</h2>
+            <div class="news-row" style="display: flex; gap: 20px;">
+                <a href="novica1.html" class="news-item" style="position: relative; background: url('news1.jpg') no-repeat center center / contain; width: 33%; height: 300px; background-size: cover; text-decoration: none;">
+                    <div style="position: absolute; top: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px; border-radius: 5px; font-size: 12px;">01.01.2024</div>
+                    <div style="position: absolute; bottom: 0; width: 100%; height: 33%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center;">
+                        <p style="color: white; text-decoration: none;">BOŽIČNA PRIREDITEV</p>
+                    </div>
+                </a>
+                <a href="novica2.html" class="news-item" style="position: relative; background: url('news2.jpg') no-repeat center center / contain; width: 33%; height: 300px; background-size: cover; text-decoration: none;">
+                    <div style="position: absolute; top: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px; border-radius: 5px; font-size: 12px;">02.01.2024</div>
+                    <div style="position: absolute; bottom: 0; width: 100%; height: 33%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center;">
+                        <p style="color: white; text-decoration: none;">14. REDNA SEJA OBČINSKEGA SVETA</p>
+                    </div>
+                </a>
+                <a href="novica3.html" class="news-item" style="position: relative; background: url('news3.jpg') no-repeat center center / contain; width: 33%; height: 300px; background-size: cover; text-decoration: none;">
+                    <div style="position: absolute; top: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px; border-radius: 5px; font-size: 12px;">03.01.2024</div>
+                    <div style="position: absolute; bottom: 0; width: 100%; height: 33%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center;">
+                        <p style="color: white; text-decoration: none;">SREDSTVA ZA SOCIALNI DEL ŠOLSKEGA SKLADA</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+<br><br><br>
+        <section class="latest-razpisi" style="margin: 0 auto; width: 50%;">
+            <h2 style="text-align: center; border-bottom: 1px solid #ccc; padding-bottom: 10px;">Javni razpisi in objave</h2>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; padding: 10px 0;">
+                    <a href="novica5.html" style="color: black; text-decoration:none;">SKUPNA ODLOČBA - DIJAKI UPRAVIČENI DO ŽEPNINE</a>
+                    <span>Rok: Do preklica</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; padding: 10px 0;">
+                    <a href="razpis4.html" style="text-decoration:none; color: black;">SKUPNA ODLOČBA - ŠTUDENTI UPRAVIČENI DO ŽEPNINE</a>
+                    <span>Rok: Do preklica</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; padding: 10px 0;">
+                    <a href="razpis1.html" style="color: black; text-decoration:none;">POVABILO K ODDAJI PONUDBE V POSTOPKU ZBIRANJA PONUDB</a>
+                    <span>Rok: 13.12.2024</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; padding: 10px 0;">
+                    <a href="razpis2.html" style="color: black; text-decoration:none;">NAVODILO O DODELITVI DONATORSKIH SREDSTEV IZ PRORAČUNA OBČINE PESNICA - 2024</a>
+                    <span>Rok: 31.12.2024</span>
+                </div>
+            </div>
+        </section>
+        <br><br><br>
+
+        <section class="map" style="margin: 20px auto; width: 80%; text-align: center;">
+            <h2 style="border-bottom: 1px solid #ccc; padding-bottom: 10px;">Zemljevid</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.6478887398095!2d15.670456615711747!3d46.60685697913115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f79c154f5c04b%3A0x5e2ed3a8d9debf47!2sPesnica%20pri%20Mariboru!5e0!3m2!1sen!2ssi!4v1702021165001!5m2!1sen!2ssi" 
+                width="100%" 
+                height="400" 
+                style="border: 0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+    <footer style="background: #8d1017; padding: 20px 0; color: white;">
+        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">KONTAKT</h3>
+                <p>Občina Pesnica</p>
+                <p>Pesnica pri Mariboru 43a</p>
+                <p>2211 Pesnica pri Mariboru</p>
+                <p>📞 02 654 23 09</p>
+                <p>📠 02 654 23 19</p>
+                <p>📧 <a href="mailto:obcina.pesnica@pesnica.si" style="text-decoration: none; color: white;">obcina.pesnica@pesnica.si</a></p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">URADNE URE - ZA STRANKE</h3>
+                <p>Ponedeljek: 8.00 - 12.00, 13.00 - 15.00</p>
+                <p>Sreda: 8.00 - 12.00, 13.00 - 17.00</p>
+                <p>Petek: 8.00 - 12.00</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">POSLOVNI ČAS OBČINE</h3>
+                <p>Ponedeljek: 7.00 - 15.00</p>
+                <p>Torek: 7.00 - 15.00</p>
+                <p>Sreda: 7.00 - 17.00</p>
+                <p>Četrtek: 7.00 - 15.00</p>
+                <p>Petek: 7.00 - 13.00</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

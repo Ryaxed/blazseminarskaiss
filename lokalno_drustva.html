@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Društva - Lokalno Pesnica</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8d1017;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .search-box input[type="text"] {
+            padding: 10px;
+            font-size: 14px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .search-box button {
+            background-color: #8d1017;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #aa2d2f;
+        }
+        .content, .dropdown {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        }
+        .dropdown {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2:hover {
+            text-decoration: underline;
+        }
+        .dropdown h2 {
+            color: #8d1017;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .dropdown ul {
+            list-style: none;
+            padding: 0;
+            display: none;
+        }
+
+        .dropdown ul.active {
+            display: block;
+        }
+
+        .dropdown li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown li a:hover {
+            text-decoration: underline;
+            color: #8d1017;
+        }
+        .additional-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.info-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    min-height: 200px;
+}
+
+.info-item h3 {
+    color: #8d1017;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.info-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #8d1017;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png"   alt="Pesnica Logo" /></a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="obcina.html">Občina</a>
+                    <ul>
+                        <li><a href="obcina_glavni_podatki.html">Glavni podatki</a></li>
+                        <li><a href="obcina_obcinska_uprava.html">Občinska uprava</a></li>
+                        <li><a href="obcina_katalog_informacij.html">Katalog informacij</a></li>
+                        <li><a href="obcina_delovni_cas.html">Delovni čas in kontakt</a></li>
+                    </ul>
+                </li>
+                <li><a href="organi.html">Organi</a>
+                    <ul>
+                        <li><a href="organi_glavni_organi.html">Glavni organi</a></li>
+                        <li><a href="organi_obcinski_svet.html">Občinski svet</a></li>
+                        <li><a href="organi_volilna_komisija.html">Volilna komisija</a></li>
+                    </ul>
+                </li>
+                <li><a href="novice.html">Novice</a>
+                    <ul>
+                        <li><a href="novice_novo.html">Novo</a></li>
+                        <li><a href="novice_razpisi.html">Razpisi</a></li>
+                        <li><a href="novice_pomembno.html">Pomembno</a></li>
+                    </ul>
+                </li>
+                <li><a href="lokalno.html">Lokalno</a>
+                    <ul>
+                        <li><a href="lokalno_drustva.html">Društva</a></li>
+                        <li><a href="lokalno_solstvo.html">Šolstvo</a></li>
+                        <li><a href="lokalno_zdravstvo.html">Zdravstvo</a></li>
+                        <li><a href="lokalno_donatorstvo.html">Donatorstvo</a></li>
+                    </ul>
+                </li>
+                <li><a href="vloge.html">Vloge/Obrazci</a>
+                    <ul>
+                        <li><a href="vloge_dijaki_studenti.html">Za dijake/študente</a></li>
+                        <li><a href="vloge_uradne.html">Uradne vloge in obrazci</a></li>
+                    </ul>
+                </li>
+                <li><a href="ostalo.html">Ostalo</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-box" style="margin-top: 10px; position: absolute; right: 20px; top: 20px;">
+            <input type="text" placeholder="Išči...">
+            <button id="close-image"><img src="lupa.png"></button>
+        </div>
+    </header>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".dropdown h2").forEach(header => {
+            header.addEventListener("click", function() {
+                const ul = header.nextElementSibling;
+                ul.classList.toggle("active");
+            });
+        });
+    });
+</script>
+    <main>
+        <section class="content">
+            <h1>Aktivna društva v Občini Pesnica</h1>
+            <p>Seznam aktivnih društev in organizacij v lokalni skupnosti.</p>
+        </section>
+
+        <section class="dropdown">
+            <h2>KS Pesnica pri Mariboru</h2>
+<ul>
+    <li>Gasilsko društvo Pesnica</li>
+    <li>Turistično društvo Pesnica</li>
+    <li>Društvo upokojencev Pesnica</li>
+    <li>Lovska družina Pesnica - Jarenina</li>
+    <li>KO Rdečega križa Pesnica</li>
+    <li>Tenis klub Pesnica</li>
+    <li>ŠD Partizan Pesnica - NK Pesnica</li>
+    <li>OO ZB za vrednote NOB Kungota, Pesnica, Šentilj</li>
+    <li>OZ Veteranov vojne za Slovenijo</li>
+    <li>OZ Slovenskih častnikov</li>
+    <li>Ribiško društvo Jelenče</li>
+    <li>Konjeniško društvo Pesnica</li>
+    <li>Društvo za kulturo, turizem, šport in razvoj "Štibl"</li>
+    <li>KUD Marice Kerenčič Pesnica</li>
+    <li>Čebelarsko društvo Pesnica</li>
+    <li>Spretni prsti podeželja</li>
+    <li>Prijateljsko društvo starodobnih vozil Pesnica</li>
+    <li>Društvo prijateljev mladine Pesnica</li>
+    <li>Športno društvo Dol. Počehova Pesnica</li>
+    <li>Društvo Mravljica</li>
+    <li>ZKD občin Kungota, Pesnica, Šentilj</li>
+    <li>Humanitarno društvo NI-LU iz srca do src</li>
+    <li>Kulturno društvo Mladi prijatelj Pesnica</li>
+</ul>
+
+<h2>KS Jakobski Dol</h2>
+<ul>
+    <li>Gasilsko društvo Jakobški Dol</li>
+    <li>Turistično vinogradniško društvo Slovenske gorice</li>
+    <li>Društvo upokojencev Jakobški Dol</li>
+    <li>Lovska družina Jakobški Dol</li>
+    <li>ŠD Inter Jakob</li>
+    <li>KO Rdeči križ Jakobški Dol</li>
+    <li>KUD Peter Golob</li>
+    <li>KD Mi Jakob</li>
+    <li>Enduro klub Jakob</li>
+    <li>Društvo kmečkih žena</li>
+</ul>
+
+<h2>KS Pernica</h2>
+<ul>
+    <li>Gasilsko društvo Pernica</li>
+    <li>Društvo upokojencev Pernica</li>
+    <li>Lovska družina Pernica</li>
+    <li>Športno društvo Pernica</li>
+    <li>KUD Pernica</li>
+    <li>TD Pernica</li>
+    <li>KO ZZB NOB</li>
+    <li>Konjeniški klub Zlata horda</li>
+    <li>Moto klub Perniški asi</li>
+    <li>Pevsko kulturno društvo Canticum Pernica</li>
+</ul>
+
+<h2>KS Jarenina</h2>
+<ul>
+    <li>Gasilsko društvo Jarenina</li>
+    <li>Turistično društvo Ovtar Jarenina</li>
+    <li>Društvo upokojencev Jarenina</li>
+    <li>Lovska družina Pesnica - Jarenina</li>
+    <li>KO Rdeči križ Jarenina</li>
+    <li>Tenis klub Jarenina</li>
+    <li>Nogometni klub Jarenina</li>
+    <li>KUD Kajuh Jarenina</li>
+    <li>KO ZZB NOB</li>
+    <li>Mala pihalna godba Neuvirovi Štajerci</li>
+</ul>
+        </section>
+
+        <section class="additional-info">
+            <div class="info-item">
+                <h3>Splošno</h3>
+                <p><strong>SOFINANCIRANJE DRUŠTEV 2017 - 2023</strong></p>
+                <p>Občina Pesnica</p>
+                <p>2211 Pesnica pri Mariboru</p>
+            </div>
+            <div class="info-item">
+                <h3>Gasilska</h3>
+                <p><strong>FINANCIRANJE JAVNIH GASILSKIH SLUŽB</strong></p>
+                <p>Pesnica pri Maribor 35</p>
+                <p>2211 Pesnica pri Mariboru</p>
+            </div>
+            <div class="info-item">
+                <h3>Kulturna</h3>
+                <p><strong>POZIV K OŽIVITVI KUD PESNICA</strong></p>
+                <p>Pesnica</p>
+                <p>2211 Pesnica pri Mariboru</p>
+                <p>📧 <a href="mailto:zkd.pisarna@gmail.com">zkd.pisarna@gmail.com</a></p>
+            </div>
+            <div class="info-item" style="grid-column: 2;">
+                <h3>Društva upokojencev</h3>
+                <p><strong>DRUŠTVO UPOKOJENCEV PESNICA</strong></p>
+                <p>Pesnica 41</p>
+                <p>2211 Pesnica pri Mariboru</p>
+                <p>📞 031 622 101</p>
+                <p>📞 040 632 162</p>
+                <p>📧 <a href="mailto:dupesnica@gmail.com">dupesnica@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: #8d1017; padding: 20px 0; color: white;">
+        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">KONTAKT</h3>
+                <p>Občina Pesnica</p>
+                <p>Pesnica pri Mariboru 43a</p>
+                <p>2211 Pesnica pri Mariboru</p>
+                <p>📞 02 654 23 09</p>
+                <p>📠 02 654 23 19</p>
+                <p>📧 <a href="mailto:obcina.pesnica@pesnica.si" style="text-decoration: none; color: white;">obcina.pesnica@pesnica.si</a></p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">URADNE URE - ZA STRANKE</h3>
+                <p>Ponedeljek: 8.00 - 12.00, 13.00 - 15.00</p>
+                <p>Sreda: 8.00 - 12.00, 13.00 - 17.00</p>
+                <p>Petek: 8.00 - 12.00</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-bottom: 10px;">POSLOVNI ČAS OBČINE</h3>
+                <p>Ponedeljek: 7.00 - 15.00</p>
+                <p>Torek: 7.00 - 15.00</p>
+                <p>Sreda: 7.00 - 17.00</p>
+                <p>Četrtek: 7.00 - 15.00</p>
+                <p>Petek: 7.00 - 13.00</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
